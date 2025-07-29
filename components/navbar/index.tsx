@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { TouchableOpacity } from "react-native";
 import Logo from "../../assets/images/svg/logo.svg";
 import MenuButton from "../../assets/images/svg/menu.svg";
-import Menu from "./menu";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -12,7 +11,7 @@ const Navbar = () => {
       colors={["#014789", "#001930"]}
       start={{ x: 0, y: 0 }}
       end={{ x: 1, y: 0 }}
-      className="flex-row items-center justify-between h-16 px-4 mt-10 py-3"
+      className="flex-row items-center justify-between h-16 px-4 mt-10 py-3 w-full"
     >
       {/* Left: App Logo / Icon */}
       <TouchableOpacity>
@@ -23,7 +22,7 @@ const Navbar = () => {
       <TouchableOpacity onPress={() => setOpen(!open)}>
         <MenuButton width={30} height={30} />
       </TouchableOpacity>
-      <Menu onOpenChange={setOpen} open={open} />
+      {/* <Menu onOpenChange={setOpen} open={open} /> */}
     </LinearGradient>
   );
 };
